@@ -4,6 +4,7 @@ import { HedearComponent } from './components/hedear/hedear.component';
 import {SharedModule} from "../shared/shared.module";
 import {RouterModule} from "@angular/router";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 
 
@@ -16,6 +17,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     SharedModule,
     RouterModule,
     HttpClientModule,
+    BrowserAnimationsModule
 
   ],
   exports: [
