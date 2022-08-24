@@ -7,6 +7,7 @@ import {SharedModule} from "./shared/shared.module";
 import {SocialMediaModule} from "./social-media/social-media.module";
 import {ComplexFormComponent} from "./complex-form/components/complex-form/complex-form.component";
 import {ComplexFormModule} from "./complex-form/complex-form.module";
+import {ReactiveStateModule} from "./reactive-state/reactive-state.module";
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {ComplexFormModule} from "./complex-form/complex-form.module";
     CoreModule,
     SharedModule,
     SocialMediaModule,
-    ComplexFormModule
+    ComplexFormModule,
+    ReactiveStateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
