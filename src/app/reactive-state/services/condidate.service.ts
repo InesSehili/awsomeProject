@@ -17,6 +17,8 @@ export class CondidateService {
   private _candidates$ = new BehaviorSubject<ConditateModel[]>([]);
   //– qui émettra des tableaux de  Candidate .
 
+
+
   get candidates$(): Observable<ConditateModel[]> {
     return this._candidates$.asObservable();
   }
@@ -26,6 +28,7 @@ export class CondidateService {
   }/* Appeler  next  sur l'un des BehaviorSubjects du service, c'est s'assurer que tous
   les components qui sont souscrits à leurs Observables recevront cette nouvelle donnée.*/
   private lastCandidatesLoad = 0;
+
   getCondidateFromServer(){
     if (Date.now() - this.lastCandidatesLoad <= 300000) {
       return;

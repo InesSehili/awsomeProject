@@ -15,6 +15,7 @@ export class PostListComponent implements OnInit {
   constructor(private route : ActivatedRoute, private postsService : PostService) { }
 
   ngOnInit(): void {
+    console.log(this.route.data)
     this.posts$ =  this.route.data.pipe(
       map(data => data['posts'])
     );

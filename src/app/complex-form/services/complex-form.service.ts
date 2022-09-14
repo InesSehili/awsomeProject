@@ -13,9 +13,12 @@ export class ComplexFormService{
     return this.http.post(`${environment.apiUrl}/users`, formValue).pipe(
       mapTo(true),
       delay(1000),
-      catchError(()=> of(false).pipe(
-        delay(1000)
-      ))
+      catchError((error) => {
+        console.log(error)
+        return of(false).pipe(
+          delay(1000),
+        )
+      })
     );
   }
 }
